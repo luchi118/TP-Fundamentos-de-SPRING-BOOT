@@ -69,7 +69,7 @@ public class TareaService {
     }
 
     public String obtenerEstadisticas() {
-        if (mostrarEstadisticas=false) {
+        if (!mostrarEstadisticas) {
             return "La visualización de estadísticas está deshabilitada por configuración (app.mostrar-estadisticas=false).";
         }
         List<Tarea> todas = tareaRepository.obtenerTodas();

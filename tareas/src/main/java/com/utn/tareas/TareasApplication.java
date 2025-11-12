@@ -31,15 +31,14 @@ public class TareasApplication implements CommandLineRunner {
 		mensajeService.mostrarBienvenida();
 
 		// 2. Mostrar la configuración actual
-		System.out.println("\n--- 2. Configuración ---");
 		System.out.println(tareaService.imprimirConfiguracion());
 
 		// 3. Listar todas las tareas iniciales
-		System.out.println("\n--- 3. Tareas Iniciales ---");
+		System.out.println("\n--- Tareas Iniciales ---");
 		tareaService.listarTodas().forEach(System.out::println);
 
 		// 4. Agregar una nueva tarea
-		System.out.println("\n--- 4. Agregando Tarea ---");
+		System.out.println("\n--- Agregando Tarea ---");
 		try {
 			tareaService.agregarTarea("Escribir la documentación", Prioridad.ALTA);
 			System.out.println("✅ Tarea agregada con éxito.");
@@ -48,24 +47,24 @@ public class TareasApplication implements CommandLineRunner {
 		}
 
 		// 5. Listar tareas pendientes
-		System.out.println("\n--- 5. Tareas Pendientes (Después de agregar) ---");
+		System.out.println("\n--- Tareas Pendientes (Después de agregar) ---");
 		tareaService.listarPendientes().forEach(System.out::println);
 
 		// 6. Marcar una tarea como completada (Usaremos la Tarea con ID=2 de la inicialización)
 		Long idAMarcar = 2L;
-		System.out.println("\n--- 6. Marcando Tarea ID " + idAMarcar + " como Completada ---");
+		System.out.println("\n--- Marcando Tarea ID " + idAMarcar + " como Completada ---");
 		if (tareaService.marcarComoCompletada(idAMarcar)) {
 			System.out.println("✅ Tarea ID " + idAMarcar + " marcada como completada.");
 		} else {
-			System.out.println("❌ No se encontró la Tarea con ID " + idAMarcar + ".");
+			System.out.println("No se encontró la Tarea con ID " + idAMarcar + ".");
 		}
 
 		// 7. Mostrar estadísticas
-		System.out.println("\n--- 7. Estadísticas ---");
+		System.out.println("\n--- Estadísticas ---");
 		System.out.println(tareaService.obtenerEstadisticas());
 
 		// 8. Listar tareas completadas
-		System.out.println("\n--- 8. Tareas Completadas ---");
+		System.out.println("\n--- Tareas Completadas ---");
 		tareaService.listarCompletadas().forEach(System.out::println);
 
 		// 9. Mostrar mensaje de despedida
