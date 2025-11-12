@@ -23,13 +23,13 @@ CAPTURAS:
 
 -Perfil Dev:
 
-> ![Texto alternativo](capturas/dev1.png)
-> ![Texto alternativo](capturas/dev2.png)
+> ![Texto alternativo](Capturas/dev1.png)
+> ![Texto alternativo](Capturas/dev2.png)
 
 -Perfil Prod:
 
-> ![Texto alternativo](capturas/prod1.png)
-> ![Texto alternativo](capturas/prod2.png)
+> ![Texto alternativo](Capturas/prod1.png)
+> ![Texto alternativo](Capturas/prod2.png)
 
 
 Conclusiones:
